@@ -18,9 +18,9 @@ export class AppComponent implements OnInit
         'whatsup'
   ];
     let color = [
-      "#FFFF00",
-      "#000000",
-      "#FF0000"
+      '#FFFF00',
+      '#000000',
+      '#FF0000'
     ]
 
   let index = 0;
