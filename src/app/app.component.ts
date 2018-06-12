@@ -31,7 +31,7 @@ export class AppComponent implements OnInit
 
  
 
-  throw new Error("Method not implemented.");
+  throw new Error(" KO DUUDE not implemented.");
   }
 
  
