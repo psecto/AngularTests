@@ -12,7 +12,7 @@ export class AppComponent implements OnInit
   myColor: string;
  
  
-  ngOnInit(): void {
+  ngOnInit() {
   let quotes = [
         'yo',
         'punk',
@@ -20,7 +20,7 @@ export class AppComponent implements OnInit
   ];
     let color = [
       '#FFFF00',
-      '#000000',
+      '#32CD32',
       '#FF0000'
     ]
 
@@ -32,7 +32,7 @@ export class AppComponent implements OnInit
     index=(index+1)%3; 
     this.MyTitle = quotes[index]; 
     this.myColor = color[index];
-  }, 3000);
+  }, 2000);
 
   throw new Error(" KO DUUDE not implemented.");
   }
