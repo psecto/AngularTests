@@ -1,0 +1,11 @@
+<div class="center-content flex-column full-screen">
+    <h1>{{text}}</h1>
+    <div class="container">
+        <div *ngFor="let line of cases; let i=index" class="line">
+            <div *ngFor="let case of line; let j=index" class="column" (click)="onCaseClicked(i, j)">
+              <img *ngIf="case == 1" src="./assets/circle.png"/>
+              <img *ngIf="case == -1" src="./assets/cross.png"/>
+            </div>
+          </div>          
+    </div>
+</div>

@@ -11,12 +11,12 @@ export class AppComponent implements OnInit
   MyTitle: string;
   myColor: string;
  
- 
+ //define then run text and background color
   ngOnInit() {
   let quotes = [
-        'yo',
-        'punk',
-        'whatsup'
+        'TIC',
+        'TECHNIC',
+        'TOE'
   ];
     let color = [
       '#FFFF00',
