@@ -9,6 +9,7 @@ export class AppComponent implements OnInit
 
 {
   MyTitle: string;
+  myColor: string;
  
  
   ngOnInit(): void {
