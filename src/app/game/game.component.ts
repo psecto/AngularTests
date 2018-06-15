@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 
-
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
@@ -17,7 +16,7 @@ export class GameComponent
   text = '';
 
   // Game board
-  cases: number[][] = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+  cases: number[][][]= [ [[0, 0, 0], [0, 0, 0], [0, 0, 0]], [[0, 0, 0], [0, 0, 0], [0, 0, 0]] ] ;
 
   // Current player
   player = 1;
@@ -33,13 +32,13 @@ export class GameComponent
   /**
    * Called when a case is clicked.
    */
-  onCaseClicked(line: number, column: number): void
+  onCaseClicked(line: number, column: number, depth: number): void
   {
       // Check empty case
-      if (this.cases[line][column] === 0 && this._isEnded() === 0)
+      if (this.cases[line][column][depth] === 0 && this._isEnded() === 0)
       {
           // Fill case and change player
-          this.cases[line][column] = this.player;
+          this.cases[line][column][depth] = this.player;
           this.emptyCaseCount--;
           this.player *= -1;
 
@@ -68,7 +67,7 @@ export class GameComponent
    */
   private _isEnded(): number
   {
-      if (this.emptyCaseCount < 5)
+     /** if (this.emptyCaseCount < 5)
       {
           // Check lines and columns
           for (let i = 0; i < 3; ++i)
@@ -97,17 +96,21 @@ export class GameComponent
               }
           }
       }
+      
+      */
 
       return 0;
   }
 
+
+  
   /**
    * Reset the game board.
    */
   private _reset(): void
   {
       this.text = 'Tic-Tac-Toe';
-      this.cases = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+     // this.cases = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
       this.emptyCaseCount = 9;
   }
 }

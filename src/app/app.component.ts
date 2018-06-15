@@ -34,6 +34,8 @@ export class AppComponent implements OnInit
     this.myColor = color[index];
   }, 2000);
 
+//in case of error, return:
+
   throw new Error(" KO DUUDE not implemented.");
   }
 

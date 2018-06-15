@@ -2,9 +2,11 @@
     <h1>{{text}}</h1>
     <div class="container">
         <div *ngFor="let line of cases; let i=index" class="line">
-            <div *ngFor="let case of line; let j=index" class="column" (click)="onCaseClicked(i, j)">
+            <div *ngFor="let case of line; let j=index" class="column">
+            <div *ngFor="let case of column; let z=index" class="face" (click)="onCaseClicked (i, j, z)">
               <img *ngIf="case == 1" src="./assets/circle.png"/>
               <img *ngIf="case == -1" src="./assets/cross.png"/>
+            </div>
             </div>
           </div>          
     </div>
